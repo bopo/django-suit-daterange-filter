@@ -20,9 +20,9 @@ class DateRangeForm(forms.Form):
         super(DateRangeForm, self).__init__(*args, **kwargs)
 
         self.fields['%s_start' % self.field_name] = forms.DateField(
-            widget=SuitDateWidget(attrs={'placeholder': self.title, 'style': 'width=330px;'}), label=pgettext('date', 'From'), required=False)
+            widget=SuitDateWidget(attrs={'placeholder': self.title, 'style': 'width=330px;'}), label=pgettext('date', '从'), required=False)
         self.fields['%s_end' % self.field_name] = forms.DateField(
-            widget=SuitDateWidget(attrs={'placeholder': self.title}), label=pgettext('date', 'To'), required=False)
+            widget=SuitDateWidget(attrs={'placeholder': self.title}), label=pgettext('date', '到'), required=False)
 
     def start_date(self):
         if self.is_valid():
